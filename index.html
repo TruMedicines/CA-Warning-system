@@ -1,0 +1,1276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>CA Watch — California Weather, Environmental & Emergency Hazard Dashboard</title>
+<meta name="description" content="Live, zip-code-specific weather and hazard warnings for California: wind, snow, flooding, wildfire, heat, and cold." />
+<meta name="theme-color" content="#0f1720" />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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" />
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,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" />
+<meta name="apple-mobile-web-app-title" content="CA Watch" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    /* Light grey gradient body, with a dark instrument-panel header */
+    --bg-1:#eef0f3;
+    --bg-2:#dfe3e8;
+    --header-bg:#0f1720;
+    --header-bg-2:#0b121a;
+    --surface:#ffffff;
+    --surface-raised:#f3f5f7;
+    --line:#e1e5ea;
+    --text:#161c24;
+    --muted:#5b6672;
+    --muted-dim:#8994a1;
+    --header-text:#eef2f5;
+    --header-muted:#93a4b3;
+
+    --brand:#b8811f;
+    --warning:#d1373c;
+    --watch:#d9711f;
+    --advisory:#b8811f;
+    --statement:#2f6fb0;
+    --clear:#2c9456;
+    --wind:#2f6fb0;
+    --snow:#4f8fae;
+    --rain:#2f7f9e;
+    --cold:#3f7fae;
+    --heat:#c15a26;
+    --lightning:#7a4fc0;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0}
+  body{
+    background:linear-gradient(180deg, var(--bg-1) 0%, var(--bg-2) 100%);
+    background-attachment:fixed;
+    color:var(--text);
+    font-family:'Public Sans', system-ui, sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:'JetBrains Mono', ui-monospace, monospace;}
+  a{color:inherit}
+  .wrap{max-width:840px;margin:0 auto;padding:0 20px;}
+
+  /* Header / instrument bar — stays dark to anchor the brand */
+  header.bar{
+    border-bottom:3px solid var(--brand);
+    background:linear-gradient(180deg, var(--header-bg), var(--header-bg-2));
+    position:sticky; top:0; z-index:10;
+  }
+  .bar-inner{
+    max-width:840px;margin:0 auto;padding:14px 20px;
+    display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  }
+  .wordmark{
+    display:flex;align-items:baseline;gap:8px;font-weight:800;font-size:19px;letter-spacing:-0.01em;
+    margin-right:auto;color:var(--header-text);
+  }
+  .wordmark .dot{width:9px;height:9px;border-radius:50%;background:var(--clear);display:inline-block;box-shadow:0 0 0 3px rgba(44,148,86,0.25);}
+  .wordmark .dot.warn{background:var(--warning);box-shadow:0 0 0 3px rgba(209,55,60,0.25);}
+  .wordmark small{font-weight:500;color:var(--header-muted);font-size:12px;}
+
+  .zipform{display:flex;gap:8px;}
+  .zipform input{
+    background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.16);color:var(--header-text);
+    border-radius:6px;padding:9px 12px;font-family:'JetBrains Mono',monospace;font-size:15px;
+    width:120px;letter-spacing:0.03em;
+  }
+  .zipform input::placeholder{color:var(--header-muted)}
+  .zipform button{
+    background:var(--brand);color:#1a1206;border:none;border-radius:6px;
+    padding:9px 16px;font-weight:700;font-size:14px;cursor:pointer;
+  }
+  .zipform button:hover{filter:brightness(1.08)}
+  .zipform button:disabled{opacity:.5;cursor:default}
+
+  main{max-width:840px;margin:0 auto;padding:28px 20px 80px;}
+
+  .status-msg{color:var(--muted);font-size:14px;padding:10px 0;}
+  .status-msg.error{color:var(--warning)}
+
+  /* Collapsible sections */
+  section{margin-bottom:10px;border:1px solid var(--line);border-radius:10px;background:var(--surface);box-shadow:0 1px 3px rgba(15,23,32,0.05);overflow:hidden;}
+  .section-toggle{
+    width:100%;display:flex;align-items:center;justify-content:space-between;gap:10px;
+    background:none;border:none;cursor:pointer;font-family:inherit;text-align:left;
+    padding:10px 16px;
+  }
+  .section-toggle .section-title{
+    font-size:13px;text-transform:uppercase;letter-spacing:0.08em;color:var(--muted);font-weight:700;
+  }
+  .section-toggle .chevron{
+    color:var(--muted-dim);font-size:50px;line-height:.5;transition:transform .2s ease;flex-shrink:0;
+  }
+  section.open .section-toggle .chevron{transform:rotate(180deg);}
+  section.open .section-toggle{border-bottom:1px solid var(--line);}
+  .section-body{display:none;padding:2px 16px 12px;}
+  section.open .section-body{display:block;}
+  .section-note{color:var(--muted-dim);font-size:12.5px;margin:0 0 12px;}
+
+  /* Pastel tint per section header — purely decorative, keeps sections easy to tell apart at a glance */
+  section[data-key="outlook"] .section-toggle{background:#eaf1fb;}
+  section[data-key="gauges"] .section-toggle{background:#fdf3e2;}
+  section[data-key="rivers"] .section-toggle{background:#e6f5f4;}
+  section[data-key="fires"] .section-toggle{background:#fdece0;}
+  section[data-key="cameras"] .section-toggle{background:#f1ecfb;}
+  section[data-key="outages"] .section-toggle{background:#fdf8e0;}
+  section[data-key="almanac"] .section-toggle{background:#f7f0e4;}
+  section[data-key="catools"] .section-toggle{background:#e8f4fb;}
+  section[data-key="notify"] .section-toggle{background:#fbeaf0;}
+  section[data-key="pws"] .section-toggle{background:#eaf3e4;}
+
+  /* Alerts section: same look as every other section; green when clear, red when an alert is active */
+  section[data-key="alerts"] .section-toggle{background:#eaf6ee;}
+  section[data-key="alerts"] .section-title{color:var(--clear);}
+  section[data-key="alerts"].has-alerts .section-toggle{background:#fdecec;}
+  section[data-key="alerts"].has-alerts .section-title{color:var(--warning);}
+  section[data-key="alerts"].has-alerts .section-toggle .chevron{color:var(--warning);}
+  .alerts-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:2px 14px;min-width:0;}
+  .alerts-place{color:var(--muted-dim);font-size:12.5px;}
+  .alert-none{margin:10px 0 0;font-size:14px;color:var(--muted);}
+  .alert-item{border-left:4px solid var(--statement);padding:2px 0 2px 12px;margin:12px 0 0;}
+  .alert-item.Warning{border-left-color:var(--warning)}
+  .alert-item.Watch{border-left-color:var(--watch)}
+  .alert-item.Advisory{border-left-color:var(--advisory)}
+  .alert-item.Statement{border-left-color:var(--statement)}
+  .alert-item-top{display:flex;align-items:baseline;flex-wrap:wrap;gap:2px 10px;}
+  .alert-item-event{font-weight:800;font-size:16px;}
+  .alert-item.Warning .alert-item-event{color:var(--warning)}
+  .alert-item.Watch .alert-item-event{color:var(--watch)}
+  .alert-item.Advisory .alert-item-event{color:var(--advisory)}
+  .alert-item.Statement .alert-item-event{color:var(--statement)}
+  .alert-item-time{color:var(--muted-dim);font-size:12px;font-family:'JetBrains Mono',monospace;}
+  .alert-item-headline{font-weight:600;margin:4px 0 6px;font-size:13.5px;}
+  .alert-item-text{white-space:pre-wrap;font-size:13.5px;color:var(--muted);}
+
+  /* Forecast strip */
+  .forecast-scroll{display:flex;gap:10px;overflow-x:auto;padding-bottom:6px;-webkit-overflow-scrolling:touch;}
+  .fc-card{
+    flex:0 0 130px;border:1px solid var(--line);border-radius:8px;background:var(--surface-raised);
+    padding:10px 12px 10px;
+  }
+  .fc-day{display:flex;align-items:center;gap:6px;font-weight:700;font-size:13px;line-height:1.4;margin-bottom:4px;}
+  .fc-ico{display:inline-flex;}
+  .fc-card.model{border-style:dashed;}
+  .fc-icon{flex:0 0 auto;display:block;}
+  .fc-temp{font-family:'JetBrains Mono',monospace;font-size:22px;font-weight:700;line-height:1.3;}
+  .fc-temp.day{color:var(--warning);}
+  .fc-temp.night{color:var(--statement);}
+  .fc-short{color:var(--muted);font-size:12px;line-height:1.3;margin:4px 0 8px;min-height:32px;}
+  .fc-row{display:flex;justify-content:space-between;font-size:11.5px;color:var(--muted-dim);font-family:'JetBrains Mono',monospace;line-height:1.5;padding-top:3px;border-top:1px dashed var(--line);}
+  .fc-row span:last-child{color:var(--text)}
+  .fc-row .ptrend{font-weight:800;margin-left:3px;}
+  .fc-row .ptrend.up{color:var(--warning);}
+  .fc-row .ptrend.down{color:var(--cold);}
+  .fc-row .ptrend.flat{color:var(--muted-dim);}
+  .pws-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+  @media (max-width:520px){.pws-grid{grid-template-columns:1fr}}
+
+  /* Hazard gauges */
+  .gauge-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  @media (max-width:520px){.gauge-grid{grid-template-columns:1fr}}
+  .gauge{border:1px solid var(--line);border-radius:8px;background:var(--surface-raised);padding:14px 16px;}
+  .gauge-label{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px;}
+  .gauge-label .name{font-weight:700;font-size:13.5px;}
+  .gauge-label .val{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--muted);}
+  .gauge-bar{height:8px;border-radius:4px;background:var(--line);overflow:hidden;}
+  .gauge-fill{height:100%;border-radius:4px;transition:width .4s ease;}
+  .gauge-note{color:var(--muted-dim);font-size:12px;margin-top:8px;}
+
+  /* Generic data cards (rivers / fires / stations) */
+  .data-card{border:1px solid var(--line);border-radius:6px;background:var(--surface-raised);padding:12px 16px;margin-bottom:8px;}
+  .dc-top{display:flex;justify-content:space-between;gap:10px;align-items:baseline;flex-wrap:wrap;}
+  .dc-name{font-weight:700;font-size:14.5px;}
+  .dc-meta{color:var(--muted-dim);font-size:12px;font-family:'JetBrains Mono',monospace;white-space:nowrap;}
+  .dc-detail{color:var(--muted);font-size:13px;margin-top:6px;}
+  .dc-detail a{color:var(--statement);}
+  .empty-note{color:var(--muted-dim);font-size:13.5px;padding:6px 0;}
+  .badge{display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;text-transform:uppercase;letter-spacing:0.03em;}
+  .badge.high{background:rgba(209,55,60,0.12);color:#a3282c;}
+  .badge.mod{background:rgba(217,113,31,0.12);color:#a3591a;}
+  .badge.low{background:rgba(44,148,86,0.12);color:#217a43;}
+  .badge.info{background:rgba(47,111,176,0.12);color:#245a8f;}
+
+  /* Link rows (traffic cameras / power outages) */
+  .link-row{display:flex;flex-wrap:wrap;gap:8px;}
+
+  /* Notify section + buttons + link buttons all share .btn */
+  .notify-box{border:1px solid var(--line);border-radius:8px;background:var(--surface-raised);padding:16px 18px;}
+  .notify-box p{color:var(--muted);font-size:14px;margin:0 0 14px;}
+  .btn-row{display:flex;gap:10px;flex-wrap:wrap;}
+  .btn{
+    border:1px solid var(--line);background:var(--surface);color:var(--text);
+    padding:10px 16px;border-radius:6px;font-weight:600;font-size:13.5px;cursor:pointer;font-family:inherit;
+  }
+  .btn.primary{background:var(--brand);color:#1a1206;border-color:var(--brand);}
+  .btn:disabled{opacity:.5;cursor:default}
+  a.btn{display:inline-block;text-decoration:none;}
+  .notify-state{font-size:12.5px;color:var(--muted-dim);margin-top:10px;font-family:'JetBrains Mono',monospace;}
+  .sms-note{
+    margin-top:16px;padding-top:14px;border-top:1px solid var(--line);
+    color:var(--muted-dim);font-size:12.5px;
+  }
+  .sms-note a{color:var(--statement);text-decoration:none;font-weight:600;}
+
+  footer{padding:22px 20px 40px;color:var(--muted-dim);font-size:12px;}
+  footer a{color:var(--muted);}
+
+  .skeleton{color:var(--muted-dim);font-size:13px;padding:8px 0;}
+
+  /* Bottom sponsor bar (AdShuffle — self-hosted, MIT-licensed rotator) */
+  body{padding-bottom:0;}
+  body.has-ad-bar{padding-bottom:78px;}
+  .ad-bar{
+    position:fixed;left:0;right:0;bottom:0;z-index:50;
+    background:var(--surface);border-top:1px solid var(--line);
+    box-shadow:0 -2px 10px rgba(15,23,32,0.08);
+    padding:8px 36px 8px 10px;min-height:62px;
+    display:flex;align-items:center;justify-content:center;
+  }
+  .rb-ads{max-width:800px;width:100%;}
+  .rb-random-ads{display:none;}
+  .ad-bar-label{
+    position:absolute;top:6px;left:10px;font-size:9.5px;letter-spacing:0.06em;
+    text-transform:uppercase;color:var(--muted-dim);
+  }
+  #ads-toggle-button{
+    position:absolute;top:6px;right:8px;min-width:24px;height:24px;padding:0 6px;
+    background:var(--surface-raised);border:1px solid var(--line);border-radius:12px;
+    color:var(--muted);font-size:10.5px;font-weight:700;letter-spacing:0.03em;
+    text-transform:uppercase;cursor:pointer;font-family:inherit;
+  }
+  .sponsor-slot{
+    display:flex;align-items:center;justify-content:space-between;gap:14px;
+    background:var(--surface-raised);border:1px solid var(--line);border-radius:8px;
+    padding:10px 14px;flex-wrap:wrap;
+  }
+  .sponsor-slot .sp-text{font-size:13px;color:var(--muted);}
+  .sponsor-slot .sp-text strong{color:var(--text);}
+  .sponsor-slot .sp-cta{
+    display:inline-block;background:var(--brand);color:#1a1206;font-weight:700;font-size:12.5px;
+    padding:7px 14px;border-radius:6px;text-decoration:none;white-space:nowrap;
+  }
+</style>
+</head>
+<body class="has-ad-bar">
+
+<header class="bar">
+  <div class="bar-inner">
+    <div class="wordmark">
+      <span class="dot" id="statusDot"></span>
+      CA Watch <small>Weather Environmental & Emergency Hazard Dashboard for California</small>
+    </div>
+    <form class="zipform" id="zipForm">
+      <input id="zipInput" inputmode="numeric" maxlength="5" placeholder="94102" aria-label="California ZIP code" />
+      <button type="submit" id="zipSubmit">Check</button>
+    </form>
+  </div>
+</header>
+
+<main>
+  <div id="statusMsg" class="status-msg">Enter a California ZIP code above to see live conditions and active alerts for your location.</div>
+
+  <div id="app" style="display:none;">
+
+    <section data-key="alerts" id="alertsSection">
+      <button class="section-toggle" type="button">
+        <span class="alerts-head"><span class="section-title" id="alertsTitle">Checking alerts…</span><span class="alerts-place" id="alertsPlace"></span></span>
+        <span class="chevron">▾</span>
+      </button>
+      <div class="section-body"><div id="alertsBody"></div></div>
+    </section>
+
+    <section class="open" data-key="outlook">
+      <button class="section-toggle" type="button"><span class="section-title">10-day outlook</span><span class="chevron">▾</span></button>
+      <div class="section-body">
+        <div class="forecast-scroll" id="forecastStrip"></div>
+      </div>
+    </section>
+
+    <section data-key="gauges">
+      <button class="section-toggle" type="button"><span class="section-title">Hazard readouts — next 48 hours</span><span class="chevron">▾</span></button>
+      <div class="section-body">
+        <div class="gauge-grid" id="gaugeGrid"></div>
+      </div>
+    </section>
+
+    <section data-key="rivers">
+      <button class="section-toggle" type="button"><span class="section-title">River &amp; stream gauges</span><span class="chevron">▾</span></button>
+      <div class="section-body">
+        <p class="section-note">Live USGS sensors — rising rivers often show up here hours before surface flooding does.</p>
+        <div id="riverList"><div class="skeleton">Checking nearby gauges…</div></div>
+      </div>
+    </section>
+
+    <section data-key="pws">
+      <button class="section-toggle" type="button"><span class="section-title">Hyper-local stations (Weather Underground)</span><span class="chevron">▾</span></button>
+      <div class="section-body">
+        <p class="section-note">Weather Underground runs a network of community-owned personal weather stations (PWS), often just blocks from you. Readings are not professionally calibrated, so treat them as a neighborhood-level check against the official NWS data above.</p>
+        <div class="link-row" id="pwsLinks"></div>
+        <div id="pwsList" style="margin-top:12px;"></div>
+      </div>
+    </section>
+
+    <section data-key="fires">
+      <button class="section-toggle" type="button"><span class="section-title">Wildfire activity</span><span class="chevron">▾</span></button>
+      <div class="section-body">
+        <p class="section-note">Active fire perimeters within ~75 miles. Areas inside or downhill of a burn scar carry extreme flash-flood and debris-flow risk during heavy rain.</p>
+        <div id="fireList"><div class="skeleton">Checking active fire perimeters…</div></div>
+      </div>
+    </section>
+
+    <section data-key="cameras">
+      <button class="section-toggle" type="button"><span class="section-title">Traffic cameras</span><span class="chevron">▾</span></button>
+      <div class="section-body">
+        <p class="section-note">Caltrans QuickMap is California's official source for road conditions, closures, chain controls and live camera snapshots. Caltrans recommends linking to QuickMap rather than embedding it, so these are direct links. In QuickMap, open the Layers menu, turn on cameras and chain controls, and zoom to trouble spots like I-80 over Donner Summit, US-50 at Echo Summit, I-5 over the Grapevine, SR-58 at Tehachapi Pass, and I-15 at Cajon Pass. You can also call Caltrans highway information at (800) 427-7623.</p>
+        <div class="link-row" id="cameraLinks"></div>
+      </div>
+    </section>
+
+    <section data-key="outages">
+      <button class="section-toggle" type="button"><span class="section-title">Power outages</span><span class="chevron">▾</span></button>
+      <div class="section-body">
+        <p class="section-note">No single official statewide feed covers every California utility, so pick yours for its live outage map. Municipal utilities and co-ops publish their own maps; if yours isn't listed, search its name plus “outage map”. During high fire danger, utilities may also cut power on purpose (Public Safety Power Shutoffs), so check yours for PSPS updates.</p>
+        <div class="link-row" id="utilityLinks"></div>
+      </div>
+    </section>
+
+    <section data-key="almanac">
+      <button class="section-toggle" type="button"><span class="section-title">Winter outlook (Old Farmer's Almanac)</span><span class="chevron">▾</span></button>
+      <div class="section-body">
+        <p class="section-note">
+          Published once a year, not live data — a long-range, folklore-influenced seasonal
+          outlook, not a meteorological forecast. Useful for rough planning, not for a specific
+          storm. Last updated in this page: October 2026, covering Winter 2026–2027.
+        </p>
+        <div class="data-card">
+          <div class="dc-top">
+            <span class="dc-name">The Old Farmer's Almanac</span>
+            <span class="badge info">Winter 2026–27</span>
+          </div>
+          <div class="dc-detail">
+            Calls for a warmer-than-normal and wetter winter, helped along by a strong El Niño, which
+            often favors a wetter West. California spans two Almanac regions. In the Pacific Southwest,
+            mountain areas should see near- to above-normal snowfall, with the coldest stretches in late
+            December, mid-to-late January, early February, and late March, and the stormiest periods in
+            late December, mid-January, early and late February, and early and late March. The Pacific
+            Northwest region, covering the north, also expects above-normal precipitation and snowfall,
+            with the coldest snaps in late December, early January, and early February. Check the
+            Almanac's regional map to see which applies to your county.
+            &nbsp;·&nbsp;
+            <a href="https://www.almanac.com/winter-extended-forecast-farmers-almanac" target="_blank" rel="noopener">Full regional forecast →</a>
+          </div>
+        </div>
+        <p class="section-note" style="margin:10px 0 0;">
+          For an actual short-range forecast, use the sections above — this one is just a
+          seasonal heads-up. NOAA's <a href="https://www.cpc.ncep.noaa.gov/" target="_blank" rel="noopener" style="color:var(--statement);">Climate Prediction Center</a>
+          publishes the closest thing to a scientific seasonal outlook, for comparison.
+        </p>
+      </div>
+    </section>
+
+    <section data-key="catools">
+      <button class="section-toggle" type="button"><span class="section-title">More California hazard tools</span><span class="chevron">▾</span></button>
+      <div class="section-body">
+        <p class="section-note">Official California resources for hazards a forecast alone doesn't cover: wildfire incidents and smoke, earthquakes and tsunamis, and Sierra mountain conditions.</p>
+        <div class="btn-row">
+          <a class="btn" href="https://www.fire.ca.gov/incidents" target="_blank" rel="noopener">CAL FIRE incidents →</a>
+          <a class="btn" href="https://fire.airnow.gov/" target="_blank" rel="noopener">AirNow Fire &amp; Smoke Map →</a>
+          <a class="btn" href="https://earthquake.usgs.gov/earthquakes/map/" target="_blank" rel="noopener">USGS latest earthquakes →</a>
+          <a class="btn" href="https://myshake.berkeley.edu/" target="_blank" rel="noopener">MyShake earthquake alerts →</a>
+          <a class="btn" href="https://myhazards.caloes.ca.gov/" target="_blank" rel="noopener">Cal OES MyHazards (quake, flood, fire, tsunami) →</a>
+          <a class="btn" href="https://www.sierraavalanchecenter.org/" target="_blank" rel="noopener">Sierra Avalanche Center →</a>
+        </div>
+      </div>
+    </section>
+
+    <section data-key="notify">
+      <button class="section-toggle" type="button"><span class="section-title">Get alerts</span><span class="chevron">▾</span></button>
+      <div class="section-body">
+        <div class="notify-box">
+          <p>Turn on browser notifications to get pushed alerts for <strong id="notifyZipLabel">this ZIP</strong> while CA Watch is open in a tab, or installed to your home screen. New NWS alerts are generated by the office that covers your area.</p>
+          <div class="btn-row">
+            <button class="btn primary" id="enableNotif">Enable browser alerts</button>
+            <button class="btn" id="installBtn" style="display:none;">Add to home screen</button>
+          </div>
+          <div class="notify-state" id="notifyState"></div>
+          <div class="sms-note">
+            Want a text message even when your phone is asleep? That needs a small always-on backend — a
+            static site by itself can't send SMS. This project ships a free option built on GitHub Actions
+            + your carrier's email-to-text gateway. See <a href="README.md">README.md</a> for setup, or use
+            a paid provider like Twilio for more reliable delivery.
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p style="margin:0 0 10px;">The first seven days are the NWS forecast; the last three days (dashed cards) are Open-Meteo model forecasts, which are less certain. Pressure is sea-level pressure in inHg (Open-Meteo model), averaged over each 12-hour period. <span style="color:var(--warning);font-weight:700;">↑</span> rising, <span style="color:var(--cold);font-weight:700;">↓</span> falling, <span style="font-weight:700;">→</span> steady.</p>
+    Data: <a href="https://www.weather.gov/documentation/services-web-api" target="_blank" rel="noopener">National Weather Service API</a> ·
+    <a href="https://waterservices.usgs.gov/" target="_blank" rel="noopener">USGS Water Services</a> ·
+    <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> (pressure, sun times, days 8–10) ·
+    <a href="https://www.wunderground.com/" target="_blank" rel="noopener">Weather Underground</a> (personal weather stations) ·
+    <a href="https://data-nifc.opendata.arcgis.com/" target="_blank" rel="noopener">NIFC/WFIGS</a> ·
+    ZIP geocoding: <a href="https://www.zippopotam.us/" target="_blank" rel="noopener">Zippopotam.us</a>.
+    This is a community tool, not an official emergency system — always follow guidance from local officials and the NWS.
+    Inspired for a Seattle-area environmental warning system. This website is protected by Copyright 2026 © TruMedicines ALL RIGHTS RESERVED
+  </footer>
+</main>
+
+<div class="ad-bar" id="adBar">
+  <span class="ad-bar-label">Sponsors</span>
+  <button id="ads-toggle-button"></button>
+
+  <!--
+    Rotating sponsor bar, powered by the self-hosted AdShuffle library (vendor/ad-shuffle.js,
+    MIT license). Each .rb-random-ads block below is one rotating slot — add, remove, or edit
+    them freely, no build step needed. data-sequential="true" cycles them in order every
+    data-interval seconds; switch to data-sequential="false" (or omit it) for weighted-random
+    rotation using each slot's data-frequency instead.
+  -->
+  <div class="rb-ads" data-auto-rotate="true" data-interval="8" data-sequential="true">
+
+    <!-- Example sponsor slot — replace with a real sponsor, or delete this block entirely. -->
+    <div class="rb-random-ads">
+      <div class="sponsor-slot">
+        <span class="sp-text"><strong>Sponsored by TruMedicines Co.</strong> — contact us to sponsor.</span>
+        <a class="sp-cta" href="#" target="_blank" rel="noopener sponsored">Visit →</a>
+      </div>
+    </div>
+
+    <!--
+      Permanent "advertise here" slot. Replace YOUR_PAYPAL_USERNAME below with your real
+      PayPal.me link (paypal.me/<username>) or a payment link from your PayPal account —
+      that can't be filled in for you, it's private account data. See README.md for setup
+      and for a note on PayPal's Smart Buttons if you'd rather take payment in-page instead
+      of linking out.
+    -->
+    <div class="rb-random-ads">
+      <div class="sponsor-slot">
+        <span class="sp-text">Sponsor this dashboard — your banner rotates here, seen by everyone checking California weather hazards.</span>
+        <a class="sp-cta" href="https://venmo.com/trumedicines?txn=pay&amount=50&note=Ad+payment" target="_blank" rel="noopener">Sponsor via PayPal →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+<script src="vendor/ad-shuffle.js"></script>
+
+<script>
+(function(){
+  const $ = (id) => document.getElementById(id);
+  const statusMsg = $('statusMsg');
+  const app = $('app');
+  const statusDot = $('statusDot');
+
+  const UA = { headers: { 'Accept': 'application/geo+json' } };
+  let pollTimer = null;
+  let currentPlace = null;
+
+  // ---- Optional: Weather Underground API key ----
+  // WU's data API needs a key. Paste one here to show live readings from nearby personal weather
+  // stations. Leave blank to get the Wundermap links only. Note: anything in this file is visible
+  // to every visitor, so only use a key you're comfortable having public.
+  const WU_API_KEY = '';
+
+  const esc = (s) => String(s ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+  // ---- Day / night icons ----
+  const ICON_OPEN = '<svg class="fc-icon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">';
+  const CLOUD_SHAPES = '<circle cx="8" cy="13.5" r="4"/><circle cx="13" cy="11" r="5"/><circle cx="17.5" cy="14.2" r="3.6"/><rect x="8" y="13" width="10" height="4.8"/>';
+  const WEATHER_SVG = {
+    sun: '<circle cx="12" cy="12" r="4.6" fill="#e8a317"/><g stroke="#e8a317" stroke-width="2" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="4.4"/><line x1="12" y1="19.6" x2="12" y2="22"/><line x1="2" y1="12" x2="4.4" y2="12"/><line x1="19.6" y1="12" x2="22" y2="12"/><line x1="4.93" y1="4.93" x2="6.63" y2="6.63"/><line x1="17.37" y1="17.37" x2="19.07" y2="19.07"/><line x1="4.93" y1="19.07" x2="6.63" y2="17.37"/><line x1="17.37" y1="6.63" x2="19.07" y2="4.93"/></g>',
+    partly: '<circle cx="8.5" cy="8.5" r="3.9" fill="#e8a317"/><g stroke="#e8a317" stroke-width="1.8" stroke-linecap="round"><line x1="8.5" y1="1.6" x2="8.5" y2="2.8"/><line x1="1.6" y1="8.5" x2="2.8" y2="8.5"/><line x1="3.6" y1="3.6" x2="4.4" y2="4.4"/><line x1="13.4" y1="3.6" x2="12.6" y2="4.4"/><line x1="3.6" y1="13.4" x2="4.4" y2="12.6"/></g><g fill="#8b97a6" transform="translate(5.2,6.2) scale(.76)">' + CLOUD_SHAPES + '</g>',
+    cloud: '<g fill="#8b97a6">' + CLOUD_SHAPES + '</g>',
+    rain: '<g fill="#8b97a6" transform="translate(0,-3)">' + CLOUD_SHAPES + '</g><g stroke="#3f7fae" stroke-width="1.8" stroke-linecap="round"><line x1="8.5" y1="17" x2="7.3" y2="21"/><line x1="12.5" y1="17" x2="11.3" y2="21"/><line x1="16.5" y1="17" x2="15.3" y2="21"/></g>',
+    snow: '<g fill="#8b97a6" transform="translate(0,-3)">' + CLOUD_SHAPES + '</g><g fill="#6aa6d6"><circle cx="8.5" cy="17.8" r="1.5"/><circle cx="12.5" cy="20.4" r="1.5"/><circle cx="16.5" cy="17.8" r="1.5"/></g>',
+    thunder: '<g fill="#667085" transform="translate(0,-3)">' + CLOUD_SHAPES + '</g><polygon points="13.6,14.2 9.4,19.6 12.2,19.6 10.8,23.2 15.8,17.4 12.9,17.4 14.6,14.2" fill="#f0b429"/>',
+    fog: '<g stroke="#8b97a6" stroke-width="2" stroke-linecap="round"><line x1="4" y1="7.5" x2="20" y2="7.5"/><line x1="6" y1="12" x2="22" y2="12"/><line x1="4" y1="16.5" x2="18" y2="16.5"/></g>'
+  };
+
+  // Day icon: pick the symbol that matches the period's forecast text
+  function weatherKey(p){
+    const t = (p.shortForecast || '').toLowerCase();
+    const pop = p.probabilityOfPrecipitation && p.probabilityOfPrecipitation.value;
+    const unlikely = /slight chance|isolated/.test(t) && (pop == null || pop < 30);
+    if(!unlikely){
+      if(/thunder|t-storm/.test(t)) return 'thunder';
+      if(/snow|flurr|sleet|wintry|blizzard/.test(t)) return 'snow';
+      if(/rain|shower|drizzle/.test(t)) return 'rain';
+    }
+    if(/fog|mist|haze|smoke/.test(t) && !/sunny|clear/.test(t)) return 'fog';
+    if(/partly|mostly sunny|mostly clear|few clouds|scattered|clearing|becoming sunny/.test(t)) return 'partly';
+    if(/cloud|overcast/.test(t)) return 'cloud';
+    if(/sunny|clear|fair/.test(t)) return 'sun';
+    return 'partly';
+  }
+
+  // Night icon: moon phase for that night (northern hemisphere view: waxing = lit on the right)
+  const SYNODIC = 29.530588853, NEW_MOON_REF = Date.UTC(2000, 0, 6, 18, 14, 0);
+  // Phase names change about one day either side of the quarter points, like a printed calendar
+  function moonName(f){
+    if(f < 0.0339 || f >= 0.9661) return 'New Moon';
+    if(f < 0.2161) return 'Waxing Crescent';
+    if(f < 0.2839) return 'First Quarter';
+    if(f < 0.4661) return 'Waxing Gibbous';
+    if(f < 0.5339) return 'Full Moon';
+    if(f < 0.7161) return 'Waning Gibbous';
+    if(f < 0.7839) return 'Last Quarter';
+    return 'Waning Crescent';
+  }
+  function moonFraction(ms){
+    return ((((ms - NEW_MOON_REF) / 86400000) % SYNODIC) + SYNODIC) % SYNODIC / SYNODIC;
+  }
+  function moonIcon(ms){
+    const f = moonFraction(ms);
+    const illum = (1 - Math.cos(2 * Math.PI * f)) / 2;
+    const label = `${moonName(f)} · ${Math.round(illum * 100)}% lit`;
+    const DARK = '#4b5675', LIT = '#f6e7a1';
+    let body = `<circle cx="12" cy="12" r="9" fill="${DARK}"/>`;
+    if(illum > 0.97){
+      body = `<circle cx="12" cy="12" r="9" fill="${LIT}"/>`;
+    }else if(illum >= 0.03){
+      const g = f < 0.5 ? f : 1 - f;                  // waxing fraction (mirrored when waning)
+      const c = Math.cos(2 * Math.PI * g);
+      const rx = (9 * Math.abs(c)).toFixed(2);
+      const lit = `<path d="M12 3A9 9 0 0 1 12 21A${rx} 9 0 0 ${c >= 0 ? 0 : 1} 12 3z" fill="${LIT}"/>`;
+      body += f < 0.5 ? lit : `<g transform="translate(24,0) scale(-1,1)">${lit}</g>`;
+    }
+    body += '<circle cx="12" cy="12" r="9" fill="none" stroke="#8a93ab" stroke-width="1"/>';
+    return { svg: ICON_OPEN + body + '</svg>', label };
+  }
+
+  function periodIcon(p){
+    if(p.isDaytime) return { svg: ICON_OPEN + WEATHER_SVG[weatherKey(p)] + '</svg>', label: p.shortForecast || 'Daytime' };
+    const mid = (Date.parse(p.startTime) + Date.parse(p.endTime)) / 2;
+    return moonIcon(isFinite(mid) ? mid : Date.now());
+  }
+
+  // ---- Extra forecast data: pressure (Open-Meteo) + NWS raw grid (lightning activity level) ----
+  const HPA_TO_INHG = 0.02953;
+  const PRESSURE_STEADY_HPA = 0.34; // about 0.01 inHg, the display resolution
+
+  async function getOpenMeteo(lat, lon){
+    const r = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${lat.toFixed(4)}&longitude=${lon.toFixed(4)}&hourly=pressure_msl,temperature_2m,weather_code,wind_speed_10m,precipitation_probability&daily=sunrise,sunset&temperature_unit=fahrenheit&wind_speed_unit=mph&forecast_days=11&timeformat=unixtime&timezone=auto`);
+    if(!r.ok) throw new Error('Pressure fetch failed');
+    const d = await r.json();
+    const h = d.hourly, at = (arr, i) => (arr && arr[i] != null ? arr[i] : null);
+    return {
+      hourly: h.time.map((x, i) => ({
+        t: x, hpa: at(h.pressure_msl, i), temp: at(h.temperature_2m, i), code: at(h.weather_code, i),
+        wind: at(h.wind_speed_10m, i), pop: at(h.precipitation_probability, i)
+      })),
+      sun: { rise: (d.daily && d.daily.sunrise) || [], set: (d.daily && d.daily.sunset) || [] }
+    };
+  }
+
+  const extrasCache = {};
+  async function getExtras(place, point){
+    const key = place.zip || `${place.lat},${place.lon}`;
+    const c = extrasCache[key];
+    if(c && Date.now() - c.ts < 15 * 60 * 1000) return c.data;
+    const gridUrl = point && point.properties && point.properties.forecastGridData;
+    const [om, grid] = await Promise.all([
+      getOpenMeteo(place.lat, place.lon).catch(() => null),
+      gridUrl ? getForecast(gridUrl).catch(() => null) : Promise.resolve(null)
+    ]);
+    const hourly = om ? om.hourly : null;
+    const data = { hourly, sun: om ? om.sun : null, grid };
+    if(hourly && grid) extrasCache[key] = { ts: Date.now(), data };
+    return data;
+  }
+
+  // Day of month with ordinal suffix (1st, 2nd, 3rd, 4th...), from the period's own local start date
+  function ordinalDay(p){
+    const m = /^\d{4}-\d{2}-(\d{2})/.exec(p.startTime || '');
+    if(!m) return '';
+    const n = +m[1], v = n % 100, s = ['th', 'st', 'nd', 'rd'];
+    return n + (s[(v - 20) % 10] || s[v] || s[0]);
+  }
+
+  // ---- Days 8-10: NWS stops at 7 days, so extend with Open-Meteo model data in the same shape ----
+  const WMO_TEXT = {
+    0:'Clear', 1:'Mostly clear', 2:'Partly cloudy', 3:'Cloudy', 45:'Fog', 48:'Fog', 51:'Light drizzle', 53:'Drizzle', 55:'Heavy drizzle',
+    56:'Freezing drizzle', 57:'Freezing drizzle', 61:'Light rain', 63:'Rain', 65:'Heavy rain', 66:'Freezing rain', 67:'Freezing rain',
+    71:'Light snow', 73:'Snow', 75:'Heavy snow', 77:'Snow grains', 80:'Light showers', 81:'Showers', 82:'Heavy showers',
+    85:'Snow showers', 86:'Heavy snow showers', 95:'Thunderstorms', 96:'Thunderstorms, hail', 99:'Thunderstorms, hail'
+  };
+  function dominantCode(codes){
+    const cnt = {};
+    codes.forEach((c) => { if(c != null) cnt[c] = (cnt[c] || 0) + 1; });
+    const keys = Object.keys(cnt).map(Number);
+    if(!keys.length) return null;
+    const wet = keys.filter((k) => k >= 51);
+    const wetHours = wet.reduce((s, k) => s + cnt[k], 0);
+    const pool = wetHours >= 4 ? wet : keys; // a few wet hours should not be hidden by a cloudy majority
+    return pool.sort((a, b) => cnt[b] - cnt[a] || b - a)[0];
+  }
+  function isoWithOffset(ms, offMin){
+    const d = new Date(ms + offMin * 60000), a = Math.abs(offMin);
+    return d.toISOString().slice(0, 19) + (offMin < 0 ? '-' : '+') + String(Math.floor(a / 60)).padStart(2, '0') + ':' + String(a % 60).padStart(2, '0');
+  }
+  function modelPeriods(nws, hourly, count){
+    if(!hourly || !nws.length) return [];
+    const last = nws[nws.length - 1];
+    const off = /([+-])(\d{2}):(\d{2})$/.exec(last.endTime || '');
+    let startMs = Date.parse(last.endTime);
+    if(!off || !isFinite(startMs)) return [];
+    const offMin = (off[1] === '-' ? -1 : 1) * (+off[2] * 60 + +off[3]);
+    let isDay = !last.isDaytime; // continue the day/night alternation
+    const out = [];
+    for(let i = 0; i < count; i++){
+      const endMs = startMs + 12 * 3600000;
+      const pts = hourly.filter((h) => h.t >= startMs / 1000 && h.t < endMs / 1000);
+      const temps = pts.map((h) => h.temp).filter((x) => x != null);
+      if(pts.length < 6 || !temps.length) break;
+      const winds = pts.map((h) => h.wind).filter((x) => x != null);
+      const pops = pts.map((h) => h.pop).filter((x) => x != null);
+      const code = dominantCode(pts.map((h) => h.code));
+      out.push({
+        name: '', isDaytime: isDay, model: true,
+        startTime: isoWithOffset(startMs, offMin), endTime: isoWithOffset(endMs, offMin),
+        temperature: Math.round(isDay ? Math.max(...temps) : Math.min(...temps)), temperatureUnit: 'F',
+        shortForecast: code == null ? '—' : (WMO_TEXT[code] || 'Mixed'),
+        windSpeed: winds.length ? Math.round(Math.max(...winds)) + ' mph' : '—',
+        probabilityOfPrecipitation: { value: pops.length ? Math.max(...pops) : null }
+      });
+      startMs = endMs;
+      isDay = !isDay;
+    }
+    return out;
+  }
+  function buildOutlookPeriods(forecast, hourly){
+    const nws = forecast.properties.periods.slice(0, 14);
+    return nws.concat(modelPeriods(nws, hourly, 6));
+  }
+
+  // Sunrise (day panels) or sunset (night panels): picks the event nearest the period's start,
+  // shown in the location's own local time (taken from the period's UTC offset).
+  function sunRowHtml(p, sun){
+    const label = p.isDaytime ? 'Sunrise' : 'Sunset';
+    const empty = `<div class="fc-row"><span>${label}</span><span>—</span></div>`;
+    const arr = sun && (p.isDaytime ? sun.rise : sun.set);
+    const start = Date.parse(p.startTime) / 1000;
+    const off = /([+-])(\d{2}):(\d{2})$/.exec(p.startTime || '');
+    if(!arr || !arr.length || !isFinite(start) || !off) return empty;
+    let best = null;
+    arr.forEach((t) => { if(t != null && (best == null || Math.abs(t - start) < Math.abs(best - start))) best = t; });
+    if(best == null || Math.abs(best - start) > 12 * 3600) return empty;
+    const offMin = (off[1] === '-' ? -1 : 1) * (+off[2] * 60 + +off[3]);
+    const d = new Date((best + offMin * 60) * 1000);
+    let h = d.getUTCHours();
+    const m = d.getUTCMinutes();
+    const ap = h >= 12 ? 'pm' : 'am';
+    h = h % 12 || 12;
+    return `<div class="fc-row"><span>${label}</span><span>${h}:${String(m).padStart(2, '0')}${ap}</span></div>`;
+  }
+
+  function pressureRowHtml(p, pressure){
+    const empty = '<div class="fc-row"><span>Press</span><span>—</span></div>';
+    if(!pressure) return empty;
+    const t0 = Date.parse(p.startTime) / 1000, t1 = Date.parse(p.endTime) / 1000;
+    if(!isFinite(t0) || !isFinite(t1)) return empty;
+    const pts = pressure.filter((h) => h.t >= t0 && h.t <= t1 && h.hpa != null);
+    if(pts.length < 2) return empty;
+    const avgHpa = pts.reduce((s, h) => s + h.hpa, 0) / pts.length;
+    const delta = pts[pts.length - 1].hpa - pts[0].hpa;
+    const dir = delta >= PRESSURE_STEADY_HPA ? 'up' : delta <= -PRESSURE_STEADY_HPA ? 'down' : 'flat';
+    const arrow = dir === 'up' ? '↑' : dir === 'down' ? '↓' : '→';
+    const word = dir === 'up' ? 'Rising' : dir === 'down' ? 'Falling' : 'Steady';
+    const dInHg = delta * HPA_TO_INHG;
+    const tip = `${word} (${dInHg >= 0 ? '+' : ''}${dInHg.toFixed(2)} inHg over this period)`;
+    return `<div class="fc-row"><span>Press</span><span title="${tip}">${(avgHpa * HPA_TO_INHG).toFixed(2)}<span class="ptrend ${dir}" aria-label="${word}">${arrow}</span></span></div>`;
+  }
+
+  function isoDurationMs(s){
+    const m = /^P(?:(\d+)D)?(?:T(?:(\d+)H)?(?:(\d+)M)?)?$/.exec(s || '');
+    if(!m) return 3600000;
+    return (((+m[1] || 0) * 24 + (+m[2] || 0)) * 60 + (+m[3] || 0)) * 60000;
+  }
+
+  // Highest NWS Lightning Activity Level (1-6) in the next `hours` hours, or null if unavailable
+  function maxLightningLevel(grid, hours){
+    const vals = grid && grid.properties && grid.properties.lightningActivityLevel && grid.properties.lightningActivityLevel.values;
+    if(!vals || !vals.length) return null;
+    const now = Date.now(), end = now + hours * 3600000;
+    let max = null;
+    vals.forEach((v) => {
+      const parts = String(v.validTime).split('/');
+      const s = Date.parse(parts[0]);
+      const e = s + isoDurationMs(parts[1]);
+      if(isFinite(s) && s < end && e > now && v.value != null){
+        max = Math.max(max == null ? 0 : max, v.value);
+      }
+    });
+    return max;
+  }
+
+  function setStatus(msg, isError){
+    statusMsg.style.display = 'block';
+    statusMsg.textContent = msg;
+    statusMsg.className = 'status-msg' + (isError ? ' error' : '');
+  }
+  function clearStatus(){ statusMsg.style.display = 'none'; }
+
+  // ---- Collapsible sections ----
+  document.querySelectorAll('section[data-key] > .section-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const section = btn.parentElement;
+      section.classList.toggle('open');
+      btn.setAttribute('aria-expanded', section.classList.contains('open') ? 'true' : 'false');
+    });
+  });
+
+  // ---- Geo helpers ----
+  function milesBBox(lat, lon, miles){
+    const dLat = miles / 69;
+    const dLon = miles / (69 * Math.cos(lat * Math.PI / 180));
+    return { west: lon - dLon, south: lat - dLat, east: lon + dLon, north: lat + dLat };
+  }
+  function bboxStr(bb){ return `${bb.west},${bb.south},${bb.east},${bb.north}`; }
+  function haversineMiles(lat1, lon1, lat2, lon2){
+    const R = 3958.8;
+    const toRad = (d) => d * Math.PI / 180;
+    const dLat = toRad(lat2 - lat1), dLon = toRad(lon2 - lon1);
+    const a = Math.sin(dLat/2)**2 + Math.cos(toRad(lat1))*Math.cos(toRad(lat2))*Math.sin(dLon/2)**2;
+    return R * 2 * Math.asin(Math.sqrt(a));
+  }
+
+  async function geocodeZip(zip){
+    const r = await fetch(`https://api.zippopotam.us/us/${zip}`);
+    if(!r.ok) throw new Error('ZIP not found');
+    const d = await r.json();
+    const place = d.places[0];
+    return {
+      lat: parseFloat(place.latitude),
+      lon: parseFloat(place.longitude),
+      city: place['place name'],
+      state: place['state abbreviation']
+    };
+  }
+
+  async function getPoint(lat, lon){
+    const r = await fetch(`https://api.weather.gov/points/${lat.toFixed(4)},${lon.toFixed(4)}`, UA);
+    if(!r.ok) throw new Error('NWS point lookup failed');
+    return r.json();
+  }
+
+  async function getAlerts(lat, lon){
+    const r = await fetch(`https://api.weather.gov/alerts/active?point=${lat.toFixed(4)},${lon.toFixed(4)}`, UA);
+    if(!r.ok) throw new Error('Alerts fetch failed');
+    return r.json();
+  }
+
+  async function getForecast(url){
+    const r = await fetch(url, UA);
+    if(!r.ok) throw new Error('Forecast fetch failed');
+    return r.json();
+  }
+
+  function severityClass(a){
+    const ev = (a.event || '').toLowerCase();
+    if(ev.includes('warning')) return 'Warning';
+    if(ev.includes('watch')) return 'Watch';
+    if(ev.includes('advisory')) return 'Advisory';
+    return 'Statement';
+  }
+
+  function fmtTime(iso){
+    try{
+      return new Date(iso).toLocaleString('en-US', { weekday:'short', hour:'numeric', minute:'2-digit' });
+    }catch(e){ return ''; }
+  }
+
+  const SEV_RANK = { Warning: 0, Watch: 1, Advisory: 2, Statement: 3 };
+
+  function renderAlertStatus(place, alerts){
+    const sec = $('alertsSection'), title = $('alertsTitle'), body = $('alertsBody');
+    const where = `${place.city}, CA · ${place.zip}`;
+    $('alertsPlace').textContent = where;
+    body.innerHTML = '';
+    const list = alerts.features.slice().sort((x, y) =>
+      (SEV_RANK[severityClass(x.properties)] - SEV_RANK[severityClass(y.properties)]) ||
+      (new Date(y.properties.sent) - new Date(x.properties.sent)));
+    if(list.length === 0){
+      sec.classList.remove('has-alerts');
+      title.textContent = 'No active alerts';
+      statusDot.className = 'dot';
+      body.innerHTML = `<p class="alert-none">No active alerts at ${esc(where)} — no watches, warnings, or advisories are currently in effect.</p>`;
+      return;
+    }
+    sec.classList.add('has-alerts');
+    statusDot.className = 'dot warn';
+    title.textContent = list[0].properties.event + (list.length > 1 ? ` +${list.length - 1} more` : '');
+    list.forEach((f) => {
+      const p = f.properties;
+      const detail = (p.description || '').trim() + (p.instruction ? '\n\nWhat to do:\n' + p.instruction.trim() : '');
+      const item = document.createElement('div');
+      item.className = `alert-item ${severityClass(p)}`;
+      item.innerHTML = `
+        <div class="alert-item-top">
+          <span class="alert-item-event">${esc(p.event)}</span>
+          <span class="alert-item-time">until ${p.expires ? esc(fmtTime(p.expires)) : 'further notice'}</span>
+        </div>
+        ${p.headline ? `<div class="alert-item-headline">${esc(p.headline)}</div>` : ''}
+        <div class="alert-item-text">${esc(detail)}</div>`;
+      body.appendChild(item);
+    });
+  }
+
+  // Day label from the period's own start date (NWS names like "This Afternoon" or "Tonight" aren't weekdays).
+  function periodDayAbbr(p){
+    const m = (p.startTime || '').match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if(!m) return p.name;
+    const d = new Date(Date.UTC(+m[1], +m[2] - 1, +m[3]));
+    return ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'][d.getUTCDay()];
+  }
+
+  function renderForecast(forecast, hourly, sun){
+    const strip = $('forecastStrip');
+    strip.innerHTML = '';
+    buildOutlookPeriods(forecast, hourly).forEach(p => {
+      const card = document.createElement('div');
+      card.className = 'fc-card' + (p.model ? ' model' : '');
+      if(p.model) card.title = 'Model forecast (Open-Meteo) — beyond the 7-day NWS forecast';
+      const ic = periodIcon(p);
+      card.innerHTML = `
+        <div class="fc-day"><span>${periodDayAbbr(p)} ${ordinalDay(p)}</span><span class="fc-ico" role="img" aria-label="${esc(ic.label)}" title="${esc(ic.label)}">${ic.svg}</span></div>
+        <div class="fc-temp ${p.isDaytime ? 'day' : 'night'}">${p.temperature}°${p.temperatureUnit}</div>
+        <div class="fc-short">${p.shortForecast}</div>
+        <div class="fc-row"><span>Wind</span><span>${p.windSpeed}</span></div>
+        <div class="fc-row"><span>Precip</span><span>${p.probabilityOfPrecipitation && p.probabilityOfPrecipitation.value != null ? p.probabilityOfPrecipitation.value + '%' : '—'}</span></div>
+        ${pressureRowHtml(p, hourly)}
+        ${sunRowHtml(p, sun)}
+      `;
+      strip.appendChild(card);
+    });
+  }
+
+  function parseWindMph(str){
+    const m = (str || '').match(/(\d+)(?:\s*to\s*(\d+))?/);
+    if(!m) return 0;
+    return m[2] ? parseInt(m[2],10) : parseInt(m[1],10);
+  }
+
+  function renderGauges(forecast, gridData){
+    const periods = forecast.properties.periods.slice(0, 4); // next ~48h
+    let maxWind = 0, maxPrecip = 0, minTemp = Infinity, maxTemp = -Infinity;
+    let snowMention = false;
+    periods.forEach(p => {
+      maxWind = Math.max(maxWind, parseWindMph(p.windSpeed));
+      if(p.probabilityOfPrecipitation && p.probabilityOfPrecipitation.value != null){
+        maxPrecip = Math.max(maxPrecip, p.probabilityOfPrecipitation.value);
+      }
+      minTemp = Math.min(minTemp, p.temperature);
+      maxTemp = Math.max(maxTemp, p.temperature);
+      if(/snow/i.test(p.shortForecast)) snowMention = true;
+    });
+
+    // Lightning: NWS Lightning Activity Level (LAL 1-6) over the next 48h, with forecast-text fallback
+    const textThunder = periods.some((p) => /thunder|lightning/i.test(p.shortForecast || ''));
+    let lal = maxLightningLevel(gridData, 48);
+    let lightning;
+    if(lal == null){
+      lightning = {
+        name: 'Lightning risk', color: 'var(--lightning)',
+        value: textThunder ? 'Mentioned' : 'None', unit: '',
+        pct: textThunder ? 60 : 5,
+        note: textThunder ? 'Thunder or lightning appears in the forecast text — be ready to move indoors.' : 'No thunderstorms mentioned in current forecast.'
+      };
+    } else {
+      if(textThunder && lal < 2) lal = 2;
+      const labels = { 1: 'None', 2: 'Isolated', 3: 'Scattered', 4: 'Scattered', 5: 'Numerous', 6: 'Dry lightning' };
+      lightning = {
+        name: 'Lightning risk', color: 'var(--lightning)',
+        value: labels[lal] || ('LAL ' + lal), unit: '',
+        pct: Math.max(5, ((lal - 1) / 5) * 100),
+        note: lal >= 6 ? 'Dry lightning possible — high wildfire ignition risk.' :
+              lal >= 5 ? 'Numerous strikes possible — stay indoors during storms.' :
+              lal >= 3 ? 'Thunderstorms possible — be ready to move indoors.' :
+              lal === 2 ? 'Isolated thunderstorms possible; a few strikes.' : 'No thunderstorms expected.'
+      };
+    }
+
+    const gauges = [
+      {
+        name: 'Wind gusts', color: 'var(--wind)', value: maxWind, unit: 'mph',
+        pct: Math.min(100, (maxWind/60)*100),
+        note: maxWind >= 50 ? 'High wind risk — secure loose objects, expect outages.' :
+              maxWind >= 35 ? 'Elevated wind — watch for falling branches.' : 'Normal range.'
+      },
+      {
+        name: 'Snow risk', color: 'var(--snow)', value: snowMention ? 'Mentioned' : 'None', unit: '',
+        pct: snowMention ? 70 : 5,
+        note: snowMention ? 'Snow appears in the forecast text — check timing above.' : 'No snow mentioned in current forecast.'
+      },
+      {
+        name: 'Rain / flood risk', color: 'var(--rain)', value: maxPrecip, unit: '%',
+        pct: maxPrecip,
+        note: maxPrecip >= 70 ? 'High chance of rain — check drains and gutters.' :
+              maxPrecip >= 40 ? 'Moderate chance of rain.' : 'Low chance of rain.'
+      },
+      lightning,
+      {
+        name: 'Cold exposure', color: 'var(--cold)', value: minTemp, unit: '°F',
+        pct: Math.max(0, Math.min(100, (32 - minTemp) * 4 + 10)),
+        note: minTemp <= 32 ? 'Below freezing — exposure risk for people outdoors.' :
+              minTemp <= 40 ? 'Chilly overnight lows.' : 'Normal range.'
+      },
+      {
+        name: 'Heat risk', color: 'var(--heat)', value: maxTemp, unit: '°F',
+        pct: Math.max(0, Math.min(100, (maxTemp - 70) * 2.5)),
+        note: maxTemp >= 90 ? 'Hot — check on vulnerable neighbors, stay hydrated.' :
+              maxTemp >= 80 ? 'Warm conditions.' : 'Normal range.'
+      }
+    ];
+
+    const grid = $('gaugeGrid');
+    grid.innerHTML = '';
+    gauges.forEach(g => {
+      const el = document.createElement('div');
+      el.className = 'gauge';
+      el.innerHTML = `
+        <div class="gauge-label"><span class="name">${g.name}</span><span class="val">${g.value}${g.unit}</span></div>
+        <div class="gauge-bar"><div class="gauge-fill" style="width:${g.pct}%;background:${g.color}"></div></div>
+        <div class="gauge-note">${g.note}</div>
+      `;
+      grid.appendChild(el);
+    });
+  }
+
+  // ---- River & stream gauges (USGS Water Services) ----
+  async function loadRivers(place){
+    const el = $('riverList');
+    try{
+      const bb = milesBBox(place.lat, place.lon, 30);
+      const url = `https://waterservices.usgs.gov/nwis/iv/?format=json&bBox=${bboxStr(bb)}&parameterCd=00065,00060&siteStatus=active`;
+      const r = await fetch(url);
+      if(!r.ok) throw new Error('USGS fetch failed');
+      const data = await r.json();
+      const series = data.value.timeSeries || [];
+      if(!series.length){
+        el.innerHTML = '<div class="empty-note">No USGS stream gauges reporting within about 30 miles of this ZIP.</div>';
+        return;
+      }
+      const sites = {};
+      series.forEach((s) => {
+        const code = s.sourceInfo.siteCode[0].value;
+        if(!sites[code]) sites[code] = {
+          name: s.sourceInfo.siteName,
+          lat: parseFloat(s.sourceInfo.geoLocation.geogLocation.latitude),
+          lon: parseFloat(s.sourceInfo.geoLocation.geogLocation.longitude),
+          code
+        };
+        const paramCode = s.variable.variableCode[0].value;
+        const vals = s.values[0].value;
+        const latest = vals.length ? vals[vals.length - 1] : null;
+        if(!latest) return;
+        if(paramCode === '00065') sites[code].stage = { value: latest.value };
+        if(paramCode === '00060') sites[code].flow = { value: latest.value };
+      });
+      const list = Object.values(sites)
+        .map((s) => ({ ...s, dist: haversineMiles(place.lat, place.lon, s.lat, s.lon) }))
+        .sort((a,b) => a.dist - b.dist)
+        .slice(0, 6);
+      el.innerHTML = '';
+      list.forEach((s) => {
+        const card = document.createElement('div');
+        card.className = 'data-card';
+        card.innerHTML = `
+          <div class="dc-top">
+            <span class="dc-name">${s.name}</span>
+            <span class="dc-meta">${s.dist.toFixed(1)} mi away</span>
+          </div>
+          <div class="dc-detail">
+            ${s.stage ? `Gage height: <strong>${s.stage.value} ft</strong>` : 'Gage height: —'}
+            &nbsp;·&nbsp;
+            ${s.flow ? `Flow: <strong>${Number(s.flow.value).toLocaleString()} cfs</strong>` : 'Flow: —'}
+            &nbsp;·&nbsp;
+            <a href="https://waterdata.usgs.gov/monitoring-location/${s.code}" target="_blank" rel="noopener">USGS site →</a>
+          </div>
+        `;
+        el.appendChild(card);
+      });
+    }catch(err){
+      el.innerHTML = '<div class="empty-note">Stream gauge data is temporarily unavailable.</div>';
+    }
+  }
+
+  // ---- Wildfire perimeters (NIFC / WFIGS) ----
+  async function loadFires(place){
+    const el = $('fireList');
+    try{
+      const bb = milesBBox(place.lat, place.lon, 75);
+      const url = `https://services3.arcgis.com/T4QMspbfLg3qTGWY/arcgis/rest/services/WFIGS_Interagency_Perimeters_Current/FeatureServer/0/query?where=1%3D1&outFields=*&geometry=${bboxStr(bb)}&geometryType=esriGeometryEnvelope&inSR=4326&spatialRel=esriSpatialRelIntersects&outSR=4326`;
+      const r = await fetch(url);
+      if(!r.ok) throw new Error('NIFC fetch failed');
+      const data = await r.json();
+      const feats = data.features || [];
+      if(!feats.length){
+        el.innerHTML = '<div class="empty-note">No active fire perimeters mapped within about 75 miles of this ZIP.</div>';
+        return;
+      }
+      el.innerHTML = '';
+      feats.slice(0, 8).forEach((f) => {
+        const p = f.properties || {};
+        const name = p.poly_IncidentName || p.IncidentName || 'Unnamed incident';
+        const acres = p.poly_GISAcres || p.GISAcres;
+        const contained = p.attr_PercentContained ?? p.PercentContained;
+        const badge = (contained != null && contained < 30) ? 'high' : (contained != null && contained < 75) ? 'mod' : 'low';
+        const card = document.createElement('div');
+        card.className = 'data-card';
+        card.innerHTML = `
+          <div class="dc-top">
+            <span class="dc-name">${name}</span>
+            ${contained != null ? `<span class="badge ${badge}">${contained}% contained</span>` : '<span class="badge info">Active</span>'}
+          </div>
+          <div class="dc-detail">
+            ${acres ? `${Number(acres).toLocaleString(undefined,{maximumFractionDigits:0})} acres` : 'Acreage unavailable'}
+            &nbsp;·&nbsp;
+            <a href="https://inciweb.wildfire.gov/" target="_blank" rel="noopener">InciWeb updates →</a>
+          </div>
+        `;
+        el.appendChild(card);
+      });
+    }catch(err){
+      el.innerHTML = '<div class="empty-note">Wildfire perimeter data is temporarily unavailable.</div>';
+    }
+  }
+
+  // ---- Hyper-local stations (Weather Underground personal weather stations) ----
+  async function loadPws(place){
+    const links = $('pwsLinks'), list = $('pwsList');
+    const slug = place.city.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    links.innerHTML = `
+      <a class="btn" href="https://www.wunderground.com/wundermap?lat=${place.lat.toFixed(4)}&lon=${place.lon.toFixed(4)}&zoom=11" target="_blank" rel="noopener">Wundermap near ${esc(place.zip)} →</a>
+      <a class="btn" href="https://www.wunderground.com/weather/us/ca/${slug}" target="_blank" rel="noopener">${esc(place.city)} on Weather Underground →</a>`;
+    if(!WU_API_KEY){
+      list.innerHTML = '<div class="empty-note">Live station readings need a Weather Underground API key. Add one to <span class="mono">WU_API_KEY</span> in this file to list nearby stations here; until then, use the links above.</div>';
+      return;
+    }
+    list.innerHTML = '<div class="skeleton">Checking nearby personal weather stations…</div>';
+    try{
+      const near = await fetch(`https://api.weather.com/v3/location/near?geocode=${place.lat.toFixed(4)},${place.lon.toFixed(4)}&product=pws&format=json&apiKey=${encodeURIComponent(WU_API_KEY)}`);
+      if(!near.ok) throw new Error('WU station lookup failed');
+      const loc = (await near.json()).location || {};
+      const ids = (loc.stationId || []).slice(0, 5);
+      if(!ids.length){
+        list.innerHTML = '<div class="empty-note">No Weather Underground stations found near this ZIP.</div>';
+        return;
+      }
+      const obs = await Promise.all(ids.map((id, i) =>
+        fetch(`https://api.weather.com/v2/pws/observations/current?stationId=${encodeURIComponent(id)}&format=json&units=e&numericPrecision=decimal&apiKey=${encodeURIComponent(WU_API_KEY)}`)
+          .then((r) => r.ok ? r.json() : null)
+          .then((d) => d && d.observations && d.observations[0] ? { o: d.observations[0], name: (loc.stationName || [])[i], dist: (loc.distanceMi || [])[i], id } : null)
+          .catch(() => null)
+      ));
+      const good = obs.filter(Boolean);
+      if(!good.length){
+        list.innerHTML = '<div class="empty-note">Nearby stations aren\'t reporting right now.</div>';
+        return;
+      }
+      list.innerHTML = '<div class="pws-grid"></div>';
+      const grid = list.firstChild;
+      good.forEach(({ o, name, dist, id }) => {
+        const im = o.imperial || {};
+        const card = document.createElement('div');
+        card.className = 'data-card';
+        card.style.marginBottom = '0';
+        card.innerHTML = `
+          <div class="dc-top">
+            <span class="dc-name">${esc(o.neighborhood || name || id)}</span>
+            <span class="dc-meta">${dist != null ? Number(dist).toFixed(1) + ' mi' : ''}</span>
+          </div>
+          <div class="dc-detail">
+            <strong>${im.temp != null ? esc(im.temp) + '°F' : '—'}</strong>
+            &nbsp;·&nbsp; Wind ${im.windSpeed != null ? esc(im.windSpeed) : '—'}${im.windGust != null ? ' (gust ' + esc(im.windGust) + ')' : ''} mph
+            &nbsp;·&nbsp; ${im.pressure != null ? esc(im.pressure) + ' inHg' : 'Pressure —'}
+            &nbsp;·&nbsp; Humidity ${o.humidity != null ? esc(o.humidity) + '%' : '—'}
+            &nbsp;·&nbsp; Rain today ${im.precipTotal != null ? esc(im.precipTotal) + ' in' : '—'}
+            &nbsp;·&nbsp; <a href="https://www.wunderground.com/dashboard/pws/${encodeURIComponent(id)}" target="_blank" rel="noopener">${esc(id)} →</a>
+          </div>`;
+        grid.appendChild(card);
+      });
+    }catch(err){
+      list.innerHTML = '<div class="empty-note">Weather Underground station data is temporarily unavailable (check that your API key is valid).</div>';
+    }
+  }
+
+  // ---- Traffic cameras (static links to Caltrans QuickMap, California's official traveler-information site) ----
+  const CAMERA_LINKS = [
+    { name: 'Caltrans QuickMap: live cameras & road conditions', url: 'https://quickmap.dot.ca.gov/' },
+    { name: 'Caltrans highway conditions & chain controls', url: 'https://roads.dot.ca.gov/' }
+  ];
+  function renderCameraLinks(){
+    $('cameraLinks').innerHTML = CAMERA_LINKS.map(c => `<a class="btn" href="${c.url}" target="_blank" rel="noopener">${c.name} →</a>`).join('');
+  }
+
+  // ---- Power outages (static links — no free unified statewide feed exists) ----
+  const UTILITY_LINKS = [
+    { name: 'Pacific Gas & Electric (PG&E)', url: 'https://www.pge.com/outages' },
+    { name: 'Southern California Edison (SCE)', url: 'https://www.sce.com/outages-safety/outage-center/check-outage-status' },
+    { name: 'San Diego Gas & Electric (SDG&E)', url: 'https://outage.sdge.com/' },
+    { name: 'Los Angeles Dept. of Water & Power (LADWP)', url: 'https://www.ladwp.com/outages/power-outage-map' },
+    { name: 'Sacramento Municipal Utility District (SMUD)', url: 'https://myaccount.smud.org/manage/outage' }
+  ];
+  function renderUtilityLinks(){
+    $('utilityLinks').innerHTML = UTILITY_LINKS.map(u => `<a class="btn" href="${u.url}" target="_blank" rel="noopener">${u.name} →</a>`).join('');
+  }
+
+  async function refreshLocationData(place, zip) {
+    try {
+      const point = await getPoint(place.lat, place.lon);
+      const [alerts, forecast, extras] = await Promise.all([
+        getAlerts(place.lat, place.lon),
+        getForecast(point.properties.forecast),
+        getExtras(place, point)
+      ]);
+
+      renderAlertStatus(place, alerts);
+      renderForecast(forecast, extras.hourly, extras.sun);
+      renderGauges(forecast, extras.grid);
+      setSeen(zip, alerts.features.map(f => f.id));
+      return { alerts, forecast };
+    } catch (err) {
+      return null;
+    }
+  }
+
+  // ---- Notifications ----
+  function getSeen(zip){
+    try{ return JSON.parse(localStorage.getItem('ca-watch-seen-' + zip) || '[]'); }catch(e){ return []; }
+  }
+  function setSeen(zip, ids){
+    localStorage.setItem('ca-watch-seen-' + zip, JSON.stringify(ids));
+  }
+
+  async function pollForNewAlerts(place, zip){
+    try{
+      const alerts = await getAlerts(place.lat, place.lon);
+      const seen = getSeen(zip);
+      const currentIds = alerts.features.map(f => f.id);
+      const newOnes = alerts.features.filter(f => !seen.includes(f.id));
+      if(newOnes.length && Notification.permission === 'granted'){
+        newOnes.forEach(f => {
+          new Notification(`CA Watch: ${f.properties.event}`, {
+            body: f.properties.headline || `New alert for ${place.city}, CA`,
+            icon: 'icons/icon-192.png'
+          });
+        });
+      }
+
+      const refreshed = await refreshLocationData(place, zip);
+      if (refreshed) {
+        currentPlace = place;
+      }
+      setSeen(zip, currentIds);
+    }catch(e){ /* silent fail on poll */ }
+  }
+
+  function startPolling(place, zip){
+    if(pollTimer) clearInterval(pollTimer);
+    pollTimer = setInterval(() => pollForNewAlerts(place, zip), 60 * 1000);
+  }
+
+  $('enableNotif').addEventListener('click', async () => {
+    if(!('Notification' in window)){
+      $('notifyState').textContent = 'Notifications are not supported in this browser.';
+      return;
+    }
+    const perm = await Notification.requestPermission();
+    $('notifyState').textContent = perm === 'granted'
+      ? 'Browser alerts enabled. Keep this tab or installed app open to receive them.'
+      : 'Permission not granted — you can change this in your browser/site settings.';
+  });
+
+  let deferredInstallPrompt = null;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+    $('installBtn').style.display = 'inline-block';
+  });
+  $('installBtn').addEventListener('click', async () => {
+    if(!deferredInstallPrompt) return;
+    deferredInstallPrompt.prompt();
+    await deferredInstallPrompt.userChoice;
+    deferredInstallPrompt = null;
+    $('installBtn').style.display = 'none';
+  });
+
+  if('serviceWorker' in navigator){
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
+    });
+  }
+
+  // ---- Main flow ----
+  async function loadZip(zip){
+    clearStatus();
+    setStatus('Loading conditions for ' + zip + '…');
+    app.style.display = 'none';
+    try{
+      const place = await geocodeZip(zip);
+      if(place.state !== 'CA'){
+        setStatus(`${zip} is in ${place.state}, not California. CA Watch currently covers California ZIP codes only.`, true);
+        return;
+      }
+      place.zip = zip;
+      currentPlace = place;
+      const point = await getPoint(place.lat, place.lon);
+      const [alerts, forecast, extras] = await Promise.all([
+        getAlerts(place.lat, place.lon),
+        getForecast(point.properties.forecast),
+        getExtras(place, point)
+      ]);
+
+      clearStatus();
+      app.style.display = 'block';
+      renderAlertStatus(place, alerts);
+      renderForecast(forecast, extras.hourly, extras.sun);
+      renderGauges(forecast, extras.grid);
+      renderCameraLinks();
+      renderUtilityLinks();
+      $('notifyZipLabel').textContent = `${place.city}, CA (${zip})`;
+
+      loadRivers(place);
+      loadFires(place);
+      loadPws(place);
+
+      setSeen(zip, alerts.features.map(f => f.id));
+      startPolling(place, zip);
+
+      localStorage.setItem('ca-watch-last-zip', zip);
+      history.replaceState(null, '', '#' + zip);
+    }catch(err){
+      setStatus('Could not load data for that ZIP code. Double check it and try again.', true);
+    }
+  }
+
+  $('zipForm').addEventListener('submit', (e) => {
+    e.preventDefault();
+    const zip = $('zipInput').value.trim();
+    if(!/^\d{5}$/.test(zip)){
+      setStatus('Enter a valid 5-digit ZIP code.', true);
+      return;
+    }
+    loadZip(zip);
+  });
+
+  // Restore last ZIP
+  const hashZip = location.hash.replace('#','');
+  const lastZip = hashZip && /^\d{5}$/.test(hashZip) ? hashZip : localStorage.getItem('ca-watch-last-zip');
+  if(lastZip){
+    $('zipInput').value = lastZip;
+    loadZip(lastZip);
+  }
+})();
+</script>
+</body>
+</html>
